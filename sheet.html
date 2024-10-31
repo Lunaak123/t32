@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Sheet Viewer</title>
+    <link rel="stylesheet" href="sheet.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Operations Panel -->
+        <div class="operations-panel">
+            <h1>Operations Panel</h1>
+
+            <!-- Primary Column Entry -->
+            <div class="input-group">
+                <label for="primary-column">Primary Column:</label>
+                <input type="text" id="primary-column" placeholder="Enter column (e.g., A)">
+            </div>
+
+            <!-- Row Range Entry -->
+            <div class="input-group">
+                <label for="row-range">Row Range:</label>
+                <input type="text" id="row-range" placeholder="e.g., 1-10">
+            </div>
+
+            <!-- Column Range Entry -->
+            <div class="input-group">
+                <label for="col-range">Column Range:</label>
+                <input type="text" id="col-range" placeholder="e.g., A-C">
+            </div>
+
+            <!-- Apply Operation Button -->
+            <button id="apply-operation" class="apply-button">Apply</button>
+        </div>
+
+        <!-- Excel Sheet Display Area -->
+        <div id="sheet-content" class="sheet-content"></div>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <button id="download-button">Download</button>
+        </div>
+
+        <!-- Modal for Download -->
+        <div id="download-modal" class="modal">
+            <div class="modal-content">
+                <h2>Download File</h2>
+                <label for="filename">Filename:</label>
+                <input type="text" id="filename" placeholder="Enter filename">
+                <label for="file-format">Format:</label>
+                <select id="file-format">
+                    <option value="xlsx">Excel (.xlsx)</option>
+                    <option value="csv">CSV (.csv)</option>
+                </select>
+                <button id="confirm-download">Download</button>
+                <button id="close-modal">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+        <script src="sheet.js"></script>
+    </div>
+</body>
+</html>
